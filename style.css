@@ -1,0 +1,302 @@
+/* --- CSS VARIABLES: Use these to easily update colors based on Figma specs --- */
+:root {
+    --primary-pink: #d11a68;      /* Main Accent Color from Figma */
+    --secondary-orange: #ff9900;  /* Secondary Accent Color */
+    --text-dark: #2c3e50;         /* Main Heading and Body Text Color */
+    --text-light: #555;           /* Secondary/Paragraph Text Color */
+    --bg-light: #f9f9f9;          /* Section Background Color */
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fff;
+}
+
+/* --- BUTTONS & LINKS --- */
+.btn {
+    display: inline-block;
+    /* UPDATE: Adjust padding (e.g., 10px 25px) to match Figma button size */
+    padding: 10px 25px; 
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, opacity 0.3s;
+    border: 2px solid transparent;
+}
+
+/* Navbar Quote Button */
+.btn-quote {
+    background-color: transparent;
+    border-color: var(--secondary-orange);
+    color: var(--secondary-orange);
+}
+.btn-quote:hover {
+    background-color: var(--secondary-orange);
+    color: white;
+}
+
+/* Hero Contact Button */
+.btn-contact {
+    background-color: var(--primary-pink);
+    color: white;
+    border-color: var(--primary-pink);
+}
+.btn-contact:hover {
+    opacity: 0.9;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* UPDATE: Adjust padding (e.g., 15px 5%) to match Figma header spacing */
+    padding: 15px 5%;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-img {
+    /* UPDATE: Adjust height (e.g., 35px) to match Figma logo size */
+    height: 35px; 
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    /* UPDATE: Adjust gap (e.g., 30px) to match Figma link spacing */
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    /* UPDATE: Adjust font-weight and font-size to match Figma specs */
+    font-weight: 500; 
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* UPDATE: Adjust padding (e.g., 80px 5%) to match Figma section spacing */
+    padding: 80px 5%; 
+    /* Gradient background from the screenshot */
+    background: linear-gradient(135deg, #f0f4f7 0%, #ffffff 100%);
+    min-height: 80vh;
+}
+
+.hero-content {
+    /* UPDATE: Adjust max-width to control content-image ratio */
+    max-width: 50%; 
+}
+
+.tagline {
+    /* UPDATE: Adjust font size (e.g., 1.2rem) to match Figma specs */
+    font-size: 1.2rem; 
+    color: var(--text-light);
+}
+
+.hero-content h1 {
+    /* UPDATE: Adjust font size (e.g., 4.8rem) and line-height to match Figma specs */
+    font-size: 4.8rem; 
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.highlight-text {
+    color: var(--primary-pink);
+    /* Subtle shadow to mimic the glow effect in the screenshot */
+    text-shadow: 0 0 5px rgba(209, 26, 104, 0.3);
+}
+
+.description {
+    /* UPDATE: Adjust max-width and font-size to match Figma specs */
+    max-width: 480px; 
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+.stats-group {
+    display: flex;
+    align-items: center;
+    /* UPDATE: Adjust gap (e.g., 40px) to match Figma spacing */
+    gap: 40px; 
+}
+
+/* Rating Box Styling */
+.rating-value {
+    /* UPDATE: Adjust font size (e.g., 3rem) to match Figma specs */
+    font-size: 3rem; 
+    font-weight: 900;
+    color: var(--primary-pink);
+    line-height: 1;
+}
+.stars {
+    color: var(--secondary-orange);
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Client Stat Styling */
+.client-stat span {
+    /* UPDATE: Adjust font size (e.g., 2.5rem) to match Figma specs */
+    font-size: 2.5rem; 
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-image-container {
+    max-width: 40%;
+    position: relative;
+    /* Complex Shadow/Glow effect from the screenshot */
+    box-shadow: 0 0 40px rgba(209, 26, 104, 0.1); 
+    border-radius: 15px;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+/* --- FEATURES SECTION --- */
+.features-section {
+    /* UPDATE: Adjust padding (e.g., 80px 5%) to match Figma section spacing */
+    padding: 80px 5%; 
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.section-title-sub {
+    /* UPDATE: Adjust font size (e.g., 1.2rem) to match Figma specs */
+    font-size: 1.2rem; 
+    color: var(--primary-pink);
+    font-weight: 700;
+}
+
+.section-title-main {
+    /* UPDATE: Adjust font size (e.g., 2.2rem) and margin-bottom to match Figma specs */
+    font-size: 2.2rem; 
+    font-weight: 700;
+    margin-bottom: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
+}
+
+.feature-grid {
+    display: grid;
+    /* 4-column layout */
+    grid-template-columns: repeat(4, 1fr); 
+    /* UPDATE: Adjust gap (e.g., 30px) to match Figma spacing */
+    gap: 30px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    text-align: left;
+    /* UPDATE: Adjust padding (e.g., 30px 20px) to match Figma card spacing */
+    padding: 30px 20px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.feature-icon {
+    /* UPDATE: Adjust height (e.g., 60px) to match Figma icon size */
+    height: 60px; 
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    /* UPDATE: Adjust font size (e.g., 1.2rem) to match Figma specs */
+    font-size: 1.2rem; 
+    color: var(--primary-pink);
+    font-weight: 700;
+}
+
+.feature-card p {
+    /* UPDATE: Adjust font size (e.g., 0.95rem) to match Figma specs */
+    font-size: 0.95rem; 
+    color: var(--text-light);
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    /* UPDATE: Adjust padding (e.g., 20px) to match Figma specs */
+    padding: 20px; 
+    background-color: var(--text-dark);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE DESIGN (Fluid Layout) --- */
+
+/* Tablet & Smaller Desktop Layout */
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%; /* Adjusted padding for smaller screens */
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 3.5rem; /* Fluid font size adjustment */
+    }
+    .hero-image-container {
+        max-width: 80%;
+        margin-top: 40px;
+    }
+    .stats-group {
+        justify-content: center;
+    }
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr); /* Switches to 2 columns */
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .nav-links ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Fluid font size adjustment for mobile */
+    }
+    .feature-grid {
+        grid-template-columns: 1fr; /* Switches to 1 column for mobile */
+    }
+    .stats-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
